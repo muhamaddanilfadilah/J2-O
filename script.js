@@ -28,7 +28,9 @@ lightbox.addEventListener("click", () => {
     lightbox.style.display = "none";
 });
 
-const cards = document.querySelectorAll(".card, .member-card, .game-card");
+const cards = document.querySelectorAll(
+".card, .member-card, .game-card, .feature-card, .rule"
+);
 
 window.addEventListener("scroll", () => {
 
@@ -43,4 +45,11 @@ card.style.transform = "translateY(0)";
 
 });
 
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
 });
