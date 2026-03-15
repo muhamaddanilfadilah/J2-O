@@ -769,32 +769,99 @@ display:none;
 /* Untuk layar ≤ 480px (HP kecil) */
 @media (max-width: 480px) {
   .navbar {
-    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 30px;
   }
 
-  .logo {
-    font-size: 18px;
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    backdrop-filter:blur(10px);
   }
 
-  .hero h2 {
-    font-size: 32px;
+.hero{
+height:auto;
+padding:120px 20px 80px;
+}
+
+.hero h2{
+font-size:34px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.hero-content{
+width:100%;
+max-width:500px;
+margin:auto;
+}
+
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .hero p {
-    font-size: 14px;
+  .cards, .games, .members, .feature-grid, .about-features, .rules-container {
+    grid-template-columns: 1fr !important;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
   }
 
-  .join h2 {
-    font-size: 28px;
+  .hero-buttons {
+    flex-direction: column;
   }
+  .about-features{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+}
 
-  .game-card img {
-    height: 100px;
-  }
+.about-feature{
+width:100%;
+}
 
-  .gallery-img {
-    height: 180px;
-  }
+.cards{
+display:flex;
+overflow-x:auto;
+gap:20px;
+scroll-snap-type:x mandatory;
+}
+
+.card{
+flex:0 0 250px;
+scroll-snap-align:start;
+}
+.cards::-webkit-scrollbar{
+display:none;
+}
+
+.about-features{
+display:flex;
+overflow-x:auto;
+gap:20px;
+scroll-snap-type:x mandatory;
+padding-bottom:10px;
+}
+
+.feature{
+flex:0 0 220px;
+scroll-snap-align:start;
+}
+
+.about-features::-webkit-scrollbar{
+display:none;
+}
 }
 
 .menu-toggle{
